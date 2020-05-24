@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {{ person.first_name }}
+
+    {% if person.first_name == 'andy' %}
+    你好，andy
+    {% else %}
+    你好， {# 陌生人（被注释，且审查元素也看不到） #}
+    {% endif %}
+
+    {{ person.first_name | upper }}
+
+    <!-- 我是注释，在审查元素时可以看到 -->
+</body>
+</html>
